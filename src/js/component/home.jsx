@@ -13,15 +13,24 @@ export function Home() {
 				onClick={() => {
 					setSelectedRed(!selectedRed);
 					setSelectedYellow(false);
+					setSelectedGreen(false);
 				}}></div>
 			<div
 				className={
 					selectedYellow ? "light yellow glow" : "light yellow"
 				}
-				onClick={() => setSelectedYellow(!selectedYellow)}></div>
+				onClick={() => {
+					setSelectedYellow(!selectedYellow);
+					setSelectedRed(false);
+					setSelectedGreen(false);
+				}}></div>
 			<div
 				className={selectedGreen ? "light green glow" : "light green"}
-				onClick={() => setSelectedGreen(!selectedGreen)}></div>
+				onClick={() => {
+					setSelectedGreen(!selectedGreen);
+					setSelectedYellow(false);
+					setSelectedRed(false);
+				}}></div>
 		</div>
 	);
 }
