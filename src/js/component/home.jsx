@@ -10,7 +10,10 @@ export function Home() {
 		<div className="traffic-light">
 			<div
 				className={selectedRed ? "light red glow" : "light red"}
-				onClick={() => setSelectedRed(!selectedRed)}></div>
+				onClick={() => {
+					setSelectedRed(!selectedRed);
+					setSelectedYellow(false);
+				}}></div>
 			<div
 				className={
 					selectedYellow ? "light yellow glow" : "light yellow"
